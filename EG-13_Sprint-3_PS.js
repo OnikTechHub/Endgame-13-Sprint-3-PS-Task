@@ -177,3 +177,27 @@ var subarraySum = function(nums, k) {
 };
 
 console.log(subarraySum([1, 1, 1], 2)); 
+
+
+
+
+// 08. Top K Frequent Elements
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+var topKFrequent = function(nums, k) {
+    const freqMap = {};
+    for (let num of nums) {
+        freqMap[num] = (freqMap[num] || 0) + 1;
+    }
+    
+    return Object.keys(freqMap)
+        .sort((a, b) => freqMap[b] - freqMap[a])
+        .slice(0, k)
+        .map(Number);
+};
+
+console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); 
