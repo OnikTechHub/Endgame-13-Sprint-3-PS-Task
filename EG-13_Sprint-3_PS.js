@@ -37,3 +37,22 @@ var moveZeroes = function(nums) {
 let numsArr = [0, 1, 0, 3, 12];
 moveZeroes(numsArr);
 console.log(numsArr); 
+
+
+
+
+// 03. Valid Anagram
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+    
+    const sortString = (str) => str.split('').sort().join('');
+    return sortString(s) === sortString(t);
+};
+
+console.log(isAnagram("anagram", "nagaram")); 
