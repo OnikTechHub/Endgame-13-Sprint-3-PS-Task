@@ -80,7 +80,7 @@ var canConstruct = function(ransomNote, magazine) {
     }
     
     return true;
-};0
+};
 
 console.log(canConstruct("aa", "aab"));  
 
